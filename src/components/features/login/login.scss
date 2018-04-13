@@ -1,0 +1,81 @@
+.dialogTitleCommon {
+  text-align : center;
+  margin     : 0;
+  font-size: 20px;
+}
+
+.dialogTitleNormal {
+  composes : dialogTitleCommon;
+}
+
+.close {
+	float: right;
+	cursor: pointer;
+	margin-top: -20px;
+}
+
+/*Animate Modal*/
+@-webkit-keyframes animatetop {
+  from {
+    top     : -150px;
+    opacity : 0
+  }
+  to {
+    top     : 0;
+    opacity : 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top     : -150px;
+    opacity : 0
+  }
+  to {
+    top     : 0;
+    opacity : 1
+  }
+}
+
+.modalBoxSignIn {
+  font-family : 'roboto', Arial, Sans-serif !important;
+  background-color           : #fefefe;
+  width                      : 35% !important;
+  -webkit-animation-name     : animatetop;
+  -webkit-animation-duration : 0.8s;
+  animation-name             : animatetop;
+  animation-duration         : 0.8s;
+  padding: 0;
+  height: 350px;
+}
+
+.modalBoxSignIn > div > div {
+  padding: 0 !important;
+  /*overflow-y: auto !important;*/
+  height: 350px;
+}
+
+.modalBoxSignIn > div {
+  height: 350px;
+}
+
+.modalBoxSignUp {
+  background-color           : #fefefe;
+  width                      : 35% !important;
+  -webkit-animation-name     : animatetop;
+  -webkit-animation-duration : 0.8s;
+  animation-name             : animatetop;
+  animation-duration         : 0.8s;
+  padding: 0;
+  height: 550px;
+}
+
+.modalBoxSignUp > div > div {
+  padding: 0 !important;
+  /*overflow-y: auto !important;*/
+  height: 550px;
+}
+
+.modalBoxSignUp > div {
+  height: 550px;
+}

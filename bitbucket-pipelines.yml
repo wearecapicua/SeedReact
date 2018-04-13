@@ -1,0 +1,42 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:6.9.4
+
+pipelines:
+  branches:
+    stage:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install
+            - npm run build -- --env=\"stage\"
+            - apt-get update
+            - apt-get install ncftp
+            - ncftpput -v -u "$USER_STAGE" -p "$PASSWORD_STAGE" -R $FTP_HOST $FTP_SITE_ROOT dist/*
+            - echo Finished uploading /dist files to $FTP_HOST$FTP_SITE_ROOT
+    qa:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install
+            - npm run build -- --env=\"qa\"
+            - apt-get update
+            - apt-get install ncftp
+            - ncftpput -v -u "$USER_QA" -p "$PASSWORD_QA" -R $FTP_HOST $FTP_SITE_ROOT dist/*
+            - echo Finished uploading /dist files to $FTP_HOST$FTP_SITE_ROOT
+    master:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - npm install
+            - npm run build -- --env=\"master\"
+            - apt-get update
+            - apt-get install ncftp
+            - ncftpput -v -u "$USER_PROD" -p "$PASSWORD_PROD" -R $FTP_HOST $FTP_SITE_ROOT dist/*
+            - echo Finished uploading /dist files to $FTP_HOST$FTP_SITE_ROOT

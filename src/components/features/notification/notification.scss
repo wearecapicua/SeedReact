@@ -1,0 +1,72 @@
+.success > div > span > div {
+  background-color : #DFF2BF !important;
+}
+
+.success div {
+  color : #4F8A10 !important;
+}
+
+.success div > span > div > div > div > span {
+  background : none !important;
+}
+
+.success div > span > div > div > div > span > div > div > div:first-child, .success div > span > div > div > div > span > div > div > div:first-child > svg {
+  width  : 50px !important;
+  height : 50px !important;
+}
+
+.error{
+  z-index: 1600;
+  position: absolute;
+}
+
+.error > div > span > div {
+  background-color : #FFBABA !important;
+}
+
+.error div {
+  color : #D8000C !important;
+}
+
+.error div > span > div > div > div > span {
+  background : none !important;
+}
+
+.error div > span > div > div > div > span > div > div > div:first-child, .error div > span > div > div > div > span > div > div > div:first-child > svg {
+  width  : 50px !important;
+  height : 50px !important;
+}
+
+.warning > div > span > div {
+  background-color : #FEEFB3 !important;
+}
+
+.warning div {
+  color : #9F6000 !important;
+}
+
+.warning div > span > div > div > div > span {
+  background : none !important;
+}
+
+.warning div > span > div > div > div > span > div > div > div:first-child, .warning div > span > div > div > div > span > div > div > div:first-child > svg {
+  width  : 50px !important;
+  height : 50px !important;
+}
+
+.info > div > span > div {
+  background-color : #BDE5F8 !important;
+}
+
+.info div {
+  color : #00529B !important;
+}
+
+.info div > span > div > div > div > span {
+  background : none !important;
+}
+
+.info div > span > div > div > div > span > div > div > div:first-child, .info div > span > div > div > div > span > div > div > div:first-child > svg {
+  width  : 50px !important;
+  height : 50px !important;
+}
